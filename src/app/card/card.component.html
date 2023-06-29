@@ -1,1 +1,15 @@
-<p>card works!</p>
+<div class="card neonContainer">
+  <p class="joke neonText">{{ getJokeService().getJoke() }}</p>
+  <div class="btnBox">
+    <button class="neonBtnRed" (click)="getJokeService().newJoke()">
+      Dislike
+    </button>
+    <button
+      class="neonBtnGreen"
+      (click)="getJokeService().newJoke()"
+      style="margin-left: 20px"
+    >
+      Like
+    </button>
+  </div>
+</div>

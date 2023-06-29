@@ -1,1 +1,9 @@
-<p>header works!</p>
+<div class="background">
+  <div class="neonText logo">GiggleTiggle</div>
+  <button
+    class="neonBtn languageBtn"
+    (click)="changeLanguage(getInverseLanguage())"
+  >
+    {{ getInverseLanguage() }}
+  </button>
+</div>

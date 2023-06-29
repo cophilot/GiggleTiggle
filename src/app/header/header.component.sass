@@ -1,0 +1,29 @@
+.background
+  height: 100px
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: row
+  background: black
+  box-shadow: 0 0 4px #fff ,0 0 40px #f700ff
+  border-bottom: 3px solid #fff
+
+  .logo
+    position: fixed
+    left: 20px
+    transition: 0.5s
+    cursor: default
+    &:hover
+      scale: 1.2
+      transform: rotate(-10deg)
+  .languageBtn
+    position: fixed
+    right: 20px
+
+@media screen and (max-width: 800px)
+  .background
+    .logo
+      &:hover
+        scale: 1
+        transform: rotate(0deg)

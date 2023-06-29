@@ -2,4 +2,106 @@
 body
   margin: 0
   padding: 0
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  color: white
+  background: #0c000f
+  font-family: 'Josefin Sans', sans-serif
+
+.sticky
+  position: fixed
+  top: 0
+  width: 100%
+
+.neonText
+  color: #ffffff
+  text-shadow: 0 0 4px #fff,0 0 11px #fff,0 0 19px #fff,0 0 40px #f700ff,0 0 80px #f700ff,0 0 90px #f700ff,0 0 100px #f700ff,0 0 150px #f700ff
+  font-size: 1.5rem
+
+.neonBtn
+  color: #ffffff
+  text-shadow: 0 0 4px #fff,0 0 11px #fff,0 0 19px #fff,0 0 40px #f700ff,0 0 80px #f700ff,0 0 90px #f700ff,0 0 100px #f700ff,0 0 150px #f700ff
+  box-shadow: 0 0 4px #fff inset,0 0 11px #fff,0 0 40px #f700ff
+  border: 3px solid #fff
+  border-radius: 5px
+  background: #0c000f
+  font-family: 'Josefin Sans', sans-serif
+  padding: 0.5rem 1rem
+  margin: 1rem 0
+  cursor: pointer
+  transition: all 0.3s ease-in-out
+  font-size: 1.5rem
+  &:hover
+    color: #f700ff
+    background: white
+    scale: 1.2
+    transform: rotate(5deg)
+    box-shadow: 0 0 4px #fff,0 0 11px #fff,0 0 19px #fff,0 0 40px #f700ff,0 0 80px #f700ff,0 0 90px #f700ff,0 0 100px #f700ff,0 0 150px #f700ff
+
+.neonBtnGreen
+  color: #ffffff
+  text-shadow: 0 0 4px #fff,0 0 11px #fff,0 0 19px #fff,0 0 40px #00ff11,0 0 80px #00ff11,0 0 90px #00ff11,0 0 100px #00ff11,0 0 150px #00ff11
+  box-shadow: 0 0 4px #fff inset,0 0 11px #fff,0 0 40px #00ff11
+  border: 3px solid #fff
+  border-radius: 5px
+  background: #0c000f
+  font-family: 'Josefin Sans', sans-serif
+  padding: 0.5rem 1rem
+  margin: 1rem 0
+  cursor: pointer
+  transition: all 0.3s ease-in-out
+  font-size: 1.5rem
+  &:hover
+    color: #00ff11
+    background: white
+    scale: 1.2
+    transform: rotate(5deg)
+    box-shadow: 0 0 4px #fff,0 0 11px #fff,0 0 19px #fff,0 0 40px #00ff11,0 0 80px #00ff11,0 0 90px #00ff11,0 0 100px #00ff11,0 0 150px #00ff11
+
+.neonBtnRed
+  color: #ffffff
+  text-shadow: 0 0 4px #fff,0 0 11px #fff,0 0 19px #fff,0 0 40px #ff0000,0 0 80px #ff0000,0 0 90px #ff0000,0 0 100px #ff0000,0 0 150px #ff0000
+  box-shadow: 0 0 4px #fff inset,0 0 11px #fff,0 0 40px #ff0000
+  border: 3px solid #fff
+  border-radius: 5px
+  background: #0c000f
+  font-family: 'Josefin Sans', sans-serif
+  padding: 0.5rem 1rem
+  margin: 1rem 0
+  cursor: pointer
+  transition: all 0.3s ease-in-out
+  font-size: 1.5rem
+  &:hover
+    color: #ff0000
+    background: white
+    scale: 1.2
+    transform: rotate(-5deg)
+    box-shadow: 0 0 4px #fff,0 0 11px #fff,0 0 19px #fff,0 0 40px #ff0000,0 0 80px #ff0000,0 0 90px #ff0000,0 0 100px #ff0000,0 0 150px #ff0000
+
+.neonContainer
+  box-shadow: 0 0 4px #fff inset,0 0 11px #fff inset,0 0 19px #fff,0 0 40px #f700ff
+  border: 3px solid #fff
+  border-radius: 5px
+  background: #0c000f
+  padding: 0.5rem 1rem
+
+@media screen and (max-width: 800px)
+  .neonBtn
+    &:hover
+      color: #ffffff
+      background: #0c000f
+      scale: 1
+      transform: rotate(0deg)
+      box-shadow: 0 0 4px #fff inset,0 0 11px #fff,0 0 40px #f700ff
+  .neonBtnGreen
+    &:hover
+      color: #ffffff
+      background: #0c000f
+      scale: 1
+      transform: rotate(0deg)
+      box-shadow: 0 0 4px #fff inset,0 0 11px #fff,0 0 40px #00ff11
+  .neonBtnRed
+    &:hover
+      color: #ffffff
+      background: #0c000f
+      scale: 1
+      transform: rotate(0deg)
+      box-shadow: 0 0 4px #fff inset,0 0 11px #fff,0 0 40px #ff0000

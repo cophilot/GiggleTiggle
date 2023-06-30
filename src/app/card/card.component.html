@@ -1,13 +1,30 @@
 <div class="card neonContainer">
-  <p class="joke neonText">{{ getJokeService().getJoke() }}</p>
+  <p class="neonText hashtags">
+    {{
+      "#" +
+        getJokeService().getJoke().category.toLowerCase() +
+        " " +
+        getJokeService().getJoke().getFlagsAsHashtags()
+    }}
+  </p>
+  <p class="joke neonText" style="margin-bottom: 5px">
+    {{ getJokeService().getJoke().text }}
+  </p>
+  <p
+    class="joke neonText"
+    *ngIf="getJokeService().getJoke().isTwoPart"
+    style="margin-top: 5px"
+  >
+    {{ getJokeService().getJoke().answer }}
+  </p>
   <div class="btnBox">
-    <button class="neonBtnRed" (click)="getJokeService().newJoke()">
+    <button class="neonBtnRed" (click)="dislike()" style="width: 120px">
       Dislike
     </button>
     <button
       class="neonBtnGreen"
-      (click)="getJokeService().newJoke()"
-      style="margin-left: 20px"
+      (click)="like()"
+      style="margin-left: 20px; width: 120px"
     >
       Like
     </button>

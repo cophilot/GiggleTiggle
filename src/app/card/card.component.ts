@@ -17,20 +17,20 @@ export class CardComponent {
 
   like(): void {
     this.liked = true;
-    setInterval(() => {
+    setTimeout(() => {
       this.liked = false;
+      this.jokeService.newJoke();
     }, 1000);
     this.jokeService.likeJoke();
-    this.jokeService.newJoke();
   }
 
   dislike(): void {
     this.disLiked = true;
-    setInterval(() => {
+    setTimeout(() => {
       this.disLiked = false;
+      this.jokeService.newJoke();
     }, 1000);
     this.jokeService.dislikeJoke();
-    this.jokeService.newJoke();
   }
 
   getJokeService() {

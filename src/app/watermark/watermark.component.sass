@@ -1,0 +1,34 @@
+.watermark
+  position: fixed
+  bottom: -100px
+  right: -100px
+  z-index: -1000
+  opacity: 0.05
+  transform: rotate(-45deg)
+  width: 500px
+  height: 500px
+.byText
+  position: fixed
+  bottom: 0px
+  left: 20px
+  z-index: -1000
+  opacity: 0.3
+  text-decoration: none
+  p
+    font-size: 15px
+  &:hover
+    opacity: 1
+    cursor: pointer
+
+@media screen and (max-width: 800px)
+  .watermark
+    display: none
+  .byText
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 10px
+    p
+      font-size: 12px
+    &:hover
+      opacity: 0.3
+      cursor: default

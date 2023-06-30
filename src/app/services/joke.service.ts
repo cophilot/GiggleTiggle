@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { LocalStorageService } from './local-storage.service';
 import { Joke } from '../utils/Joke';
 import { CategoryService } from './category.service';
+import { FlagService } from './flag.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,8 @@ export class JokeService {
   constructor(
     private http: HttpClient,
     private localStorage: LocalStorageService,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private flagService: FlagService
   ) {
     this.language = this.localStorage.getLanguage();
     this.newJoke();
@@ -22,10 +24,16 @@ export class JokeService {
 
   likeJoke(): void {
     this.categoryService.uprateCategory(this.joke.category);
+    this.joke.flags.forEach((flag) => {
+      this.flagService.uprateFlag(flag);
+    });
   }
 
   dislikeJoke(): void {
     this.categoryService.downrateCategory(this.joke.category);
+    this.joke.flags.forEach((flag) => {
+      this.flagService.downrateFlag(flag);
+    });
   }
 
   getJoke(): Joke {
@@ -33,6 +41,7 @@ export class JokeService {
   }
 
   newJoke(): void {
+    console.log(this.getURL());
     this.http.get(this.getURL()).subscribe((res: any) => {
       let text: string = '';
       let isTwoPart: boolean = false;
@@ -81,7 +90,9 @@ export class JokeService {
       'https://v2.jokeapi.dev/joke/' +
       this.categoryService.getBestRatedCategories() +
       '?lang=' +
-      this.language
+      this.language +
+      '&' +
+      this.flagService.getFlags()
     );
   }
 

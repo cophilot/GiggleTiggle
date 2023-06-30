@@ -13,7 +13,7 @@
     position: fixed
     left: 20px
     transition: 0.5s
-    cursor: default
+    cursor: pointer
     height: 70px
     &:hover
       scale: 1.2
@@ -21,9 +21,25 @@
   .languageBtn
     position: fixed
     right: 20px
+  .settings
+    position: fixed
+    right: 20px
+    width: 50px
+    cursor: pointer
+    &:hover
+      animation: spin 0.7s ease-in-out
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 
 @media screen and (max-width: 800px)
   .background
+    .settings
+      &:hover
+        animation: none
     .logo
       &:hover
         scale: 1

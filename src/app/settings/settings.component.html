@@ -1,0 +1,26 @@
+<app-watermark></app-watermark>
+<app-header class="sticky"></app-header>
+<div class="container neonContainer">
+  <div class="row">
+    <p class="label neonText">Reset storage</p>
+    <button class="neonBtn" (click)="reset()">Reset</button>
+  </div>
+  <div class="row">
+    <p class="label neonText">Language</p>
+    <button class="neonBtn" (click)="changeLanguage(getInverseLanguage())">
+      {{ getInverseLanguage() }}
+    </button>
+  </div>
+  <!-- <div class="row">
+    <p class="label neonText">Export liked jokes</p>
+    <button class="neonBtn" (click)="export()">Export</button>
+  </div> -->
+  <div class="row">
+    <p class="label neonText">View on GitHub</p>
+    <button class="neonBtn" (click)="openGithub()">View</button>
+  </div>
+  <div class="row">
+    <p></p>
+    <button class="neonBtn" (click)="goToHome()">Back</button>
+  </div>
+</div>

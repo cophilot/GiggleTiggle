@@ -1,10 +1,15 @@
 <div class="background">
-  <img class="neonText logo" src="assets/logo.png" alt="GiggleTiggle" />
-  <!-- <div class="neonText logo">GiggleTiggle</div> -->
-  <button
+  <img
+    class="neonText logo"
+    src="assets/logo.png"
+    alt="GiggleTiggle"
+    (click)="goToHome()"
+  />
+  <img src="assets/settings.png" class="settings" (click)="goToSettings()" />
+  <!-- <button
     class="neonBtn languageBtn"
     (click)="changeLanguage(getInverseLanguage())"
   >
     {{ getInverseLanguage() }}
-  </button>
+  </button> -->
 </div>

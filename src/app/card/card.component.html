@@ -1,4 +1,12 @@
-<div class="card neonContainer">
+<div
+  [class]="
+    'card neonContainer' +
+    (liked ? ' swipeRight' : '') +
+    (disLiked ? ' swipeLeft' : '')
+  "
+  (touchstart)="swipe($event, 'start')"
+  (touchend)="swipe($event, 'end')"
+>
   <p class="neonText hashtags">
     {{
       "#" +

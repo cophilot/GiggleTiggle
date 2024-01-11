@@ -23,7 +23,7 @@ export class SettingsComponent {
     this.router.navigate(['/']);
   }
   openGithub() {
-    window.open('https://github.com/phil1436/GiggleTiggle', '_blank');
+    window.open('https://github.com/cophilot/GiggleTiggle', '_blank');
   }
   getInverseLanguage() {
     if (this.jokeService.language === 'en') {
